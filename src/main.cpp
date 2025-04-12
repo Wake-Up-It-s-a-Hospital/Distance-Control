@@ -214,7 +214,7 @@ void transmitRangeFailed() {
 }
 void receiver() {
   DW1000Ng::forceTRxOff();
-  DW1000Ng::startReceive();
+  DW1000Ng::startReceive();   
 }
 void loop() {
   
