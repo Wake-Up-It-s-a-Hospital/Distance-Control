@@ -1,5 +1,5 @@
 
-# 📡 Distance-Control: UWB 기반 거리 측정 & AWS IoT 연동 시스템
+#  Distance-Control: UWB 기반 거리 측정 & AWS IoT 연동 시스템
 
    
 
@@ -36,23 +36,6 @@ AWS IoT와 연동하여 원격 모드 제어, 분실 알림 등 확장 기능을
     - 원격 모드 전환(수동/자동)
     - 분실 알림(부저 작동)
     - 장치 상태 주기 전송
-
----
-
-## 📁 프로젝트 파일 구조
-bash
-복사편집
-Distance-Control/
-├── src/
-│   ├── dwm1000_tag/           # 태그 펌웨어
-│   │   └── dwm1000_tag.ino
-│   ├── dwm1000_anchor/        # 앵커 펌웨어
-│   │   └── anchor_final_v0.ino
-│   ├── wearable_on_aws/       # AWS IoT 연동 코드
-│   │   └── aws_tag_integration_v1.ino
-│   └── main.cpp               # 예제/테스트 코드
-├── platformio.ini             # PlatformIO 빌드 설정
-└── README.md
 
 
 ## Distance-Control 기능 요약
@@ -109,6 +92,7 @@ Distance-Control/
 
 
 https://github.com/user-attachments/assets/f7d7a565-9695-4982-8655-7eac68f521dd
+
 
 
 
