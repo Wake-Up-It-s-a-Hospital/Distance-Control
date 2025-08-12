@@ -30,7 +30,6 @@ Distance-Control/
 │   └── main.cpp               # 예제/테스트 코드
 └── platformio.ini             # PlatformIO 빌드 설정
 
-```
 
 ### 앵커 핀맵 (ESP32 ↔ DWM1000)
 - **SPI**
@@ -62,5 +61,6 @@ Distance-Control/
 
 
 https://github.com/user-attachments/assets/f7d7a565-9695-4982-8655-7eac68f521dd
+
 
 
