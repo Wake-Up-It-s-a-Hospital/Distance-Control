@@ -20,15 +20,16 @@
 
 - **프로토콜**: 태그(Tag) ↔ 앵커(Anchor) 사이에 **POLL → POLL_ACK → RANGE → RANGE_REPORT** 시퀀스로 **쌍방 대칭(TWR) 거리측정**.
 - **감시/안정화**: UWB 통신 정지 감지(워치독)와 타임아웃 시 **수신 재시작 또는 리셋**.
-- 
-## 📂 폴더 구조
+
+📁 프로젝트 파일 구조  
 Distance-Control/
 ├── src/
-│   ├── dwm1000_tag/           # 태그 펌웨어
-│   ├── dwm1000_anchor/        # 앵커 펌웨어
-│   ├── wearable_on_aws/       # AWS IoT 연동 코드
-│   └── main.cpp               # 예제/테스트 코드
-└── platformio.ini             # PlatformIO 빌드 설정
+│ ├── dwm1000_tag/ # 태그 펌웨어
+│ ├── dwm1000_anchor/ # 앵커 펌웨어
+│ ├── wearable_on_aws/ # AWS IoT 연동 코드
+│ └── main.cpp # 예제/테스트 코드
+└── platformio.ini # PlatformIO 빌드 설정
+
 
 
 ### 앵커 핀맵 (ESP32 ↔ DWM1000)
@@ -61,6 +62,7 @@ Distance-Control/
 
 
 https://github.com/user-attachments/assets/f7d7a565-9695-4982-8655-7eac68f521dd
+
 
 
 
