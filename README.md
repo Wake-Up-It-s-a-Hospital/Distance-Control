@@ -1,3 +1,60 @@
+
+# 📡 Distance-Control: UWB 기반 거리 측정 & AWS IoT 연동 시스템
+
+   
+
+**Distance-Control**은 UWB 모듈(DWM1000)을 사용해 **태그(Tag)**와 **앵커(Anchor)** 간의 거리를 실시간으로 측정하고,
+
+AWS IoT와 연동하여 원격 모드 제어, 분실 알림 등 확장 기능을 제공하는 프로젝트입니다.
+
+본 레포지토리는 2025년 한국공학대학교 종합설계(캡스톤디자인) 프로젝트의 일부로서 개발되었습니다.
+
+---
+
+## 🛠️ 현재까지 구현된 기능
+
+- ✅ **UWB 거리 측정 (TWR 방식)**
+    
+    태그 ↔ 앵커 간 POLL → POLL_ACK → RANGE → RANGE_REPORT 시퀀스를 이용해 cm 단위 거리 계산.
+    
+- ✅ **태그 & 앵커 역할 분리**
+    - 태그: 거리 측정 시작, 결과 수신
+    - 앵커: 응답 및 거리 계산 후 결과 송신
+- ✅ **통신 안정성 관리**
+    
+    타임아웃 시 자동 재시작 또는 재부팅으로 시스템 멈춤 방지.
+    
+- ✅ **노이즈 보정**
+    
+    앵커 쪽에서 칼만 필터(SimpleKalmanFilter)로 튀는 값 완화.
+    
+- ✅ **측정 속도 모니터링**
+    
+    1초당 성공 측정 횟수를 표시하여 성능 파악.
+    
+- ✅ **AWS IoT 연동**
+    - 원격 모드 전환(수동/자동)
+    - 분실 알림(부저 작동)
+    - 장치 상태 주기 전송
+
+---
+
+## 📁 프로젝트 파일 구조
+bash
+복사편집
+Distance-Control/
+├── src/
+│   ├── dwm1000_tag/           # 태그 펌웨어
+│   │   └── dwm1000_tag.ino
+│   ├── dwm1000_anchor/        # 앵커 펌웨어
+│   │   └── anchor_final_v0.ino
+│   ├── wearable_on_aws/       # AWS IoT 연동 코드
+│   │   └── aws_tag_integration_v1.ino
+│   └── main.cpp               # 예제/테스트 코드
+├── platformio.ini             # PlatformIO 빌드 설정
+└── README.md
+
+
 ## Distance-Control 기능 요약
 
 1. **UWB 거리 측정**
@@ -52,6 +109,7 @@
 
 
 https://github.com/user-attachments/assets/f7d7a565-9695-4982-8655-7eac68f521dd
+
 
 
 
