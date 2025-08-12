@@ -21,7 +21,8 @@
 - **프로토콜**: 태그(Tag) ↔ 앵커(Anchor) 사이에 **POLL → POLL_ACK → RANGE → RANGE_REPORT** 시퀀스로 **쌍방 대칭(TWR) 거리측정**.
 - **감시/안정화**: UWB 통신 정지 감지(워치독)와 타임아웃 시 **수신 재시작 또는 리셋**.
 
-📁 프로젝트 파일 구조  
+
+## 📂 폴더 구조
 Distance-Control/
 ├── src/
 │ ├── dwm1000_tag/ # 태그 펌웨어
@@ -62,6 +63,7 @@ Distance-Control/
 
 
 https://github.com/user-attachments/assets/f7d7a565-9695-4982-8655-7eac68f521dd
+
 
 
 
